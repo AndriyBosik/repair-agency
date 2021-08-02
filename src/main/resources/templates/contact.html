@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact List</title>
+
+        <link rel="stylesheet" th:href="@{/css/materialize/materialize.min.css}" />
+    </head>
+    <body>
+        <h1 align="center">My Contact List</h1>
+        <br />
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="contact: ${contacts}">
+                    <td th:text="${contact.name}"></td>
+                    <td th:text="${contact.email}"></td>
+                    <td th:text="${contact.country}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="some-button">Click me!</button>
+
+        <script type="text/javascript" th:src="@{/js/materialize/materialize.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/react/react.development.js}"></script>
+        <script type="text/javascript" th:src="@{/js/react/react-dom.development.js}"></script>
+
+        <script type="text/javascript">
+            'use strict';
+
+            const e = React.createElement;
+
+            class LikeButton extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = { liked: false };
+                }
+
+                render() {
+                    if (this.state.liked) {
+                        return 'You liked this.';
+                    }
+
+                    return e(
+                        'button',
+                        { onClick: () => this.setState({ liked: true }) },
+                        'Like'
+                    );
+                }
+            }
+
+            const domContainer = document.querySelector("#some-button");
+            ReactDOM.render(e(LikeButton), domContainer);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+        th:fragment="content(page)">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title th:replace="~{${page} :: 'title'} ?: _">Repair Agency</title>
+
+        <link rel="stylesheet" th:href="@{/css/indentations.css}" />
+        <link rel="stylesheet" th:href="@{/css/common.css}" />
+        <link rel="stylesheet" th:href="@{/css/site.css}" />
+
+        <link rel="stylesheet" th:href="@{/css/materialize/materialize.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/materialize/material-icons.css}" />
+    </head>
+    <body class="s-vflex">
+        <div th:replace="~{layouts/main/header :: header} ?: _"></div>
+
+        <main class="flex-auto">
+            <div th:replace="~{${page} :: 'content'} ?: _"></div>
+        </main>
+
+        <div id="react-content"></div>
+
+        <div th:replace="~{layouts/main/footer :: footer} ?: _"></div>
+
+        <script type="text/javascript" th:src="@{/js/materialize/materialize.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/materialize/materialize-extensions.js}"></script>
+
+        <div th:replace="~{${page} :: 'scripts'} ?: _"></div>
+    </body>
+</html>

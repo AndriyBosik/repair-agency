@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+    <title th:fragment="title">Login</title>
+
+    <div th:fragment="content" class="window-height window-width yellow lighten-5 s-vflex-center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4 push-m4">
+                    <div class="px10 radius-4 z-depth-1">
+                        <form action="" method="post" class="auto-height">
+                            <div class="full-width input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input type="text" id="login">
+                                <label for="login">Login</label>
+                            </div>
+                            <div class="full-width input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="password" type="password">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="col s6 pr5">
+                                <button class="full-width btn waves-effect waves-light red" type="button">
+                                    Sign up <i class="material-icons right">supervisor_account</i>
+                                </button>
+                            </div>
+                            <div class="col s6 pl5">
+                                <button class="full-width btn waves-effect waves-light" type="button">
+                                    Login <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                            <div class="col s12 center-align my10">
+                                <a href="/restore-password">Forgot password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

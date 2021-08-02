@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+
+    <title th:fragment="title">[[${order.title}]]</title>
+
+    <div th:fragment="content" class="container py20">
+        <div class="row">
+            <div class="col s3">
+                <div class="z-depth-2">
+                    <img class="full-width" th:src="@{'/images/crashes/crash-' + ${order.id} + '.png'}" />
+                </div>
+            </div>
+            <div class="col s9">
+                <div class="order-title m0">
+                    <div class="truncate">
+                        [[${order.title}]]
+                    </div>
+                    <div class="s-hflex">
+                        <span class="new badge ">Completed</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</html>

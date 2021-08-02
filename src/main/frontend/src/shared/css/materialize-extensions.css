@@ -1,0 +1,11 @@
+span.badge.no-margin {
+    margin: 0px !important;
+}
+
+span.badge.weight-medium {
+    font-weight: 500 !important;
+}
+
+.page-footer.no-padding {
+    padding: 0px !important;
+}

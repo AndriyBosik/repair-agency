@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+
+    <title th:fragment="title">My Orders</title>
+
+    <div th:fragment="content" class="container">
+        <div class="row">
+            <h3 class="center-align">Your orders</h3>
+            <blockquote>
+                Here you can see your orders. You have a few tabs which can help you to see order that you want.
+            </blockquote>
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#all">All</a></li>
+                    <li class="tab col s3"><a href="#ready">Ready</a></li>
+                    <li class="tab col s3"><a href="#in-progress">In progress</a></li>
+                    <li class="tab col s3"><a href="#cancelled">Cancelled</a></li>
+                </ul>
+            </div>
+            <div id="all" class="col s12">
+                <div class="py10">
+                    <ul class="collection medium orders">
+                        <li class="collection-item avatar clickable">
+                            <div class="circle order-item-logo default z-depth-1"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons">done</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable red lighten-5">
+                            <div class="circle order-item-logo z-depth-1" style="background-image: url('/images/crashes/crash-1.png')"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons red-text">cancel</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable">
+                            <div class="circle order-item-logo z-depth-1"  style="background-image: url('/images/crashes/crash-2.png')"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons">payment</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable blue lighten-5">
+                            <div class="circle order-item-logo default z-depth-1"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons blue-text lighten-2">compare_arrows</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable red lighten-5">
+                            <div class="circle order-item-logo z-depth-1"  style="background-image: url('/images/crashes/crash-3.png')"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons red-text">cancel</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable red lighten-5">
+                            <div class="circle order-item-logo default z-depth-1"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons red-text">cancel</i></a>
+                        </li>
+
+                        <li class="collection-item avatar clickable">
+                            <div class="circle order-item-logo z-depth-1"  style="background-image: url('/images/crashes/crash-4.png')"></div>
+                            <p class="flow-text"><strong class="title">Title</strong></p>
+                            <p class="truncate">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et iure iusto magnam maiores nostrum, odio officia rerum. Ab asperiores at aut consequuntur culpa doloremque esse eveniet facilis incidunt, molestiae molestias nobis pariatur perferendis perspiciatis quaerat qui quibusdam quidem repudiandae, similique sunt tenetur vel voluptatem. Fugiat, natus, quod. Eaque, optio?
+                            </p>
+                            <a href="#" class="secondary-content"><i class="material-icons">payment</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="ready" class="col s12">Ready</div>
+            <div id="in-progress" class="col s12">In progress</div>
+            <div id="cancelled" class="col s12">Cancelled</div>
+        </div>
+    </div>
+
+    <script th:fragment="scripts" type="text/javascript">
+        let tabs = M.Tabs.init(document.querySelector("ul.tabs"));
+    </script>
+
+</html>
